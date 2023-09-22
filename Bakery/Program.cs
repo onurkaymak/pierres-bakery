@@ -19,6 +19,36 @@ namespace Bakery
       Console.WriteLine("* Single pastry $2 | Buy 3, get 1 free!  *");
       Console.WriteLine("*                                        *");
       Console.WriteLine("**~**~**~**~**~**~**~**~**~**~**~**~**~***");
+      Console.WriteLine(" ");
+      Console.WriteLine("Please enter the amount of the bread you'd like to buy:");
+      Console.WriteLine(" ");
+      Console.WriteLine("If you don't want any bread, simply enter 0.");
+      Console.WriteLine(" ");
+      string orderForBread = Console.ReadLine();
+      Console.WriteLine(" ");
+      Console.WriteLine($"You have {orderForBread} bread in your cart.");
+      Console.WriteLine("--------------------------------------------------------");
+      Console.WriteLine(" ");
+      Console.WriteLine("Please enter the amount of the pastry you'd like to buy:");
+      Console.WriteLine(" ");
+      Console.WriteLine("If you don't want any pastry, simply enter 0.");
+      Console.WriteLine(" ");
+      string orderForPastry = Console.ReadLine();
+      Console.WriteLine(" ");
+      Console.WriteLine($"You have {orderForPastry} pastry in your cart.");
+      Console.WriteLine("--------------------------------------------------------");
+      Console.WriteLine(" ");
+      Console.WriteLine("Creating your order, please wait...");
+      Console.WriteLine(" ");
+      System.Threading.Thread.Sleep(3000);
+
+      try
+      {
+        int convertedBreadOrder = int.Parse(orderForBread);
+        int convertedPastryOrder = int.Parse(orderForPastry);
+        Bread.NewOrder(convertedBreadOrder);
+      }
+
     }
   }
 }
