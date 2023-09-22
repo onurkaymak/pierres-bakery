@@ -23,6 +23,15 @@ namespace Bakery.Tests
     }
 
     [TestMethod]
+    public void CalcCostMethod_CalculatesCostForSingleLoaf_Cost()
+    {
+      int cost = 5;
+      int orderAmount = Bread.NewOrder(1);
+      int result = Bread.CalcCost();
+      Assert.AreEqual(cost, result);
+    }
+
+    [TestMethod]
     public void CalcCostMethod_CalculatesCostForOrder_Cost()
     {
       int newOrder = Bread.NewOrder(2);
@@ -39,5 +48,7 @@ namespace Bakery.Tests
       int result = Bread.CalcCost();
       Assert.AreEqual(cost, result);
     }
+
+
   }
 }
