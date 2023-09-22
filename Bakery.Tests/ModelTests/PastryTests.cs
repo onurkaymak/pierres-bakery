@@ -5,9 +5,12 @@ using System;
 namespace Bakery.Tests
 {
   [TestClass]
-  public class PastryTests
+  public class PastryTests : IDisposable
   {
-
+    public void Dispose()
+    {
+      Pastry.ClearAll();
+    }
 
     [TestMethod]
     public void NewOrderMethod_SetsOrderAmount_OrderAmount()
@@ -26,6 +29,13 @@ namespace Bakery.Tests
       Assert.AreEqual(cost, result);
     }
 
-
+    [TestMethod]
+    public void CalcCostMethod_CalculatesCostWithDiscount_Cost()
+    {
+      int cost = 6;
+      int orderAmount = Pastry.NewOrder(4);
+      int result = Pastry.CalcCost();
+      Assert.AreEqual(cost, result);
+    }
   }
 }
