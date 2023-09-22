@@ -27,5 +27,25 @@ namespace Bakery.Tests
       int result = newPastry.OrderAmount;
       Assert.AreEqual(order, result);
     }
+
+    [TestMethod]
+    public void CalcCostMethod_CalculatesCostWithDiscountForBread_Cost()
+    {
+      Bread newBread = new Bread();
+      newBread.NewOrder(2);
+      int cost = 10;
+      int result = newBread.CalcCost("bread");
+      Assert.AreEqual(cost, result);
+    }
+
+    [TestMethod]
+    public void CalcCostMethod_CalculatesCostWithDiscountForPastry_Cost()
+    {
+      Pastry newPastry = new Pastry();
+      newPastry.NewOrder(4);
+      int cost = 6;
+      int result = newPastry.CalcCost("pastry");
+      Assert.AreEqual(cost, result);
+    }
   }
 }
