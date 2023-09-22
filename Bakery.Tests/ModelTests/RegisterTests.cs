@@ -8,11 +8,20 @@ namespace Bakery.Tests
   public class RegisterTests
   {
     [TestMethod]
-    public void TakeOrder()
+    public void NewOrderMethod_SetsAmountForBread_Void()
     {
       Register.NewOrder(2, "bread");
       int order = 2;
       int result = Bread.OrderAmount;
+      Assert.AreEqual(order, result);
+    }
+
+    [TestMethod]
+    public void NewOrderMethod_SetsAmountForPastry_Void()
+    {
+      Register.NewOrder(3, "pastry");
+      int order = 3;
+      int result = Pastry.OrderAmount;
       Assert.AreEqual(order, result);
     }
   }
