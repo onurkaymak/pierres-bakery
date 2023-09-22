@@ -1,34 +1,12 @@
 namespace Bakery.Models
 {
-  public class Bread
+  public class Bread : Register
   {
-    public static int PriceOfSingleLoaf { get; set; } = 5;
-    public static int OrderAmount { get; set; }
+    // public static int PriceOfSingleItem { get; set; } = 5;
 
-    public static int CalcCost()
+    public Bread()
     {
-      int total = 0;
-      int loavesToPay = 0;
-
-      for (int index = 0; index <= OrderAmount; index++)
-      {
-        if (index % 3 != 0)
-        {
-          loavesToPay += 1;
-        }
-        else
-        {
-          loavesToPay += 0;
-        }
-      }
-      total = loavesToPay * PriceOfSingleLoaf;
-
-      return total;
-    }
-
-    public static void ClearAll()
-    {
-      OrderAmount = 0;
+      PriceOfSingleItem = 5;
     }
   }
 }
