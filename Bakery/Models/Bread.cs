@@ -11,7 +11,28 @@ namespace Bakery.Models
 
     public static int CalcCost()
     {
-      return OrderAmount * PriceOfSingleLoaf;
+      int total = 0;
+      int loavesToPay = 0;
+
+      for (int index = 0; index <= OrderAmount; index++)
+      {
+        if (index % 3 != 0)
+        {
+          loavesToPay += 1;
+        }
+        else
+        {
+          loavesToPay += 0;
+        }
+      }
+      total = loavesToPay * PriceOfSingleLoaf;
+
+      return total;
+    }
+
+    public static void ClearAll()
+    {
+      OrderAmount = 0;
     }
   }
 }
