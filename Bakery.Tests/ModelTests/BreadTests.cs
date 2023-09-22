@@ -8,7 +8,7 @@ namespace Bakery.Tests
   public class BreadTests
   {
     [TestMethod]
-    public void BreadConstructor_CreatesFieldForAmount_Amount()
+    public void NewOrderMethod_SetsOrderAmount_OrderAmount()
     {
       int orderAmount = 2;
       int result = Bread.NewOrder(orderAmount);
