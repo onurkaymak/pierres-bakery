@@ -4,10 +4,6 @@ namespace Bakery.Models
   {
     public static int PriceOfSingleLoaf { get; set; } = 5;
     public static int OrderAmount { get; set; }
-    public static int NewOrder(int amount)
-    {
-      return OrderAmount = amount;
-    }
 
     public static int CalcCost()
     {
