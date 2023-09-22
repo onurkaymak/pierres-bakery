@@ -14,5 +14,15 @@ namespace Bakery.Tests
       int result = Bread.NewOrder(orderAmount);
       Assert.AreEqual(orderAmount, result);
     }
+
+    [TestMethod]
+    public void CalcCostMethod_CalculatesCostForOrder_Cost()
+    {
+      // int orderAmount = 2;
+      // int newOrder = Bread.NewOrder(orderAmount);
+      int cost = 10;
+      int result = Bread.CalcCost();
+      Assert.AreEqual(cost, result);
+    }
   }
 }

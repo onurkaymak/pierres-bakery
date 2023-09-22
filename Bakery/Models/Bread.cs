@@ -8,5 +8,10 @@ namespace Bakery.Models
     {
       return OrderAmount = amount;
     }
+
+    public static int CalcCost()
+    {
+      return OrderAmount * PriceOfSingleLoaf;
+    }
   }
 }
