@@ -47,6 +47,17 @@ namespace Bakery
         int convertedBreadOrder = int.Parse(orderForBread);
         int convertedPastryOrder = int.Parse(orderForPastry);
         Bread.NewOrder(convertedBreadOrder);
+        int costForBreadOrder = Bread.CalcCost();
+        Pastry.NewOrder(convertedPastryOrder);
+        int costForPastryOrder = Pastry.CalcCost();
+        int totalCost = costForBreadOrder + costForPastryOrder;
+        Console.WriteLine($"Your total is ${totalCost} for {orderForBread} bread and {orderForPastry} pastry.");
+        Console.WriteLine(" ");
+        Console.WriteLine("Thank you for shopping with us, have a good day!");
+      }
+      catch
+      {
+        Console.WriteLine("Something went wrong.");
       }
 
     }
