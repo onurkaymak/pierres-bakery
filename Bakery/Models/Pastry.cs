@@ -13,20 +13,20 @@ namespace Bakery.Models
     public static int CalcCost()
     {
       int total = 0;
-      int loavesToPay = 0;
+      int itemToPay = 0;
 
       for (int index = 0; index <= OrderAmount; index++)
       {
         if (index % 4 != 0)
         {
-          loavesToPay += 1;
+          itemToPay += 1;
         }
         else
         {
-          loavesToPay += 0;
+          itemToPay += 0;
         }
       }
-      total = loavesToPay * PriceOfSinglePastry;
+      total = itemToPay * PriceOfSinglePastry;
 
       return total;
     }
