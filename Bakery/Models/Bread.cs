@@ -8,7 +8,6 @@ namespace Bakery.Models
     {
       return OrderAmount = amount;
     }
-
     public static int CalcCost()
     {
       int total = 0;
