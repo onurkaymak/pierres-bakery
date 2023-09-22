@@ -1,4 +1,4 @@
-# Currency Exchanger
+# Pierre's Bakery
 
 #### A C# console application for a bakery that able to take order for different bakery products and calculate total cost depends on sale discounts.
 
